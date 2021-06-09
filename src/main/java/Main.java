@@ -3,12 +3,14 @@ import java.util.HashMap;
 public class Main {
     public static void main(String[] args) {
         String[] words = {"безлесье","доработка","геологоразведка","безлесье","предплужник","подтяжка", "пилотирование","дрозофила", "привлекательность","двоешка","пилотирование", "киноискусство","сопряжённость", "зарисовывание","поддирка", "скорбность","миокардий","пилотирование"};
-        HashMap<String,Integer> wordList=new HashMap<>();
 
+        WordCounter wordCounter = new WordCounter();
         for (String word:words)
         {
-            if (wordList.get(word))
+            wordCounter.add(word);
         }
+
+        System.out.println(wordCounter);
  
         //z2
         PhoneBook pb = new PhoneBook();
